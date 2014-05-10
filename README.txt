@@ -25,12 +25,36 @@ js/										// Built from bootstrap files
 	bootstrap.min.js
 	bootstrap.js
 theme.css								// Built from bootstrap file
-index.php								// Main webpage UI
+index.html								// Index page to register/login
 functions.php							// PHP functions
 db_connect.php 							// DB Connection Configuration
-TrafficParser.php 						// Parses traffic information
+ManageAlerts.php 						// UI for managing alerts
+Map.php 								// Main webpage UI
+TrafficData.php 						// Map interface to MySQL for queries
 TrafficDataTest.php 					// Test output of traffic data
+TrafficParser.php 						// Parses traffic information
+UserDataTest.php 						// Test output of users
 WeatherParser.php 						// Parses weather information
+
+access-contolled.php 					// Login/Register files
+change-pwd.php
+changed-pwd.html
+confirmreg.php
+login.php
+logout.php
+register.php
+reset-pwd-link-sent.html
+reset-pwd-req.php
+resetpwd.php
+thank-you-regd.html
+thank-you.html
+
+alerts_manage.php 						// Alerts files
+alerts_page.php
+delete_alerts.php
+insert_alerts.php
+mail_functions.php
+send_alerts.php
 
 4_data_collection:
 db_connect.php 							// DB Connection Configuration
@@ -44,6 +68,11 @@ Place inside web server with PHP and MySQL enabled. Parsers were scheduled using
 
 5_documentation:
 Flyer.pdf
+Slides.pdf
+Group 13 - Project Proposal.pdf
+Group 13 - First Report.pdf
+Group 13 - Second Report.pdf
+Group 13 - Third Report.pdf
 Individual Contributions.pdf
 Technical Documentation.pdf
 User Documentation.pdf

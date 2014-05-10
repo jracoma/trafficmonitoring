@@ -19,11 +19,13 @@ echo "Parsing:<br />";
 $date = date('Y-m-d');
 $time = date('H:i');
 $check = date('i');
+$check2 = date('H');
 
 $weather = $response->current_observation->weather;
+$weather = WeatherCondition($weather);
 $temp = $response->current_observation->temp_f;
 echo "Date: ". $date . " / Time: " . $time . "<br />";
-echo "Currently: " . $weather . ", " . $temp . " F";
+echo "Currently: " . $weather . ", " . $temp . " F" . $nl;
 
 $query = "INSERT INTO weatherData(recordDate, recordTime, weather, temp) VALUES ('$date', '$time', '$weather', '$temp')";
 if ($check == ('02' || '03' || '04' || '05')) { // Execute only at the beginning of the hour
@@ -34,6 +36,10 @@ if ($check == ('02' || '03' || '04' || '05')) { // Execute only at the beginning
 		echo $nl . "INSERT INTO Success";
 	}
 }
+
+/* Inserts weather information every other hour */
+echo "Inserting weather into trafficData..." . $nl;
+InsertWeather();
 
 ?>
 </html>
